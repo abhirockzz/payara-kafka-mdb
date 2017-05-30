@@ -1,3 +1,5 @@
+Consume from Kafka topics using Message Driven Beans - thanks to Payara Kafka Connector
+
 ## To run
 
 - `git clone https://github.com/abhirockzz/payara-kafka-mdb.git`

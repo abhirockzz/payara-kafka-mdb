@@ -1,4 +1,4 @@
-# Consume from Kafka topics using Message Driven Beans - thanks to Payara Kafka Connector
+# Consume from Kafka topics using Message Driven Beans
 
 ## To run
 

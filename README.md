@@ -9,3 +9,5 @@
 - `mvn clean install` - will create `payara-kafka-mdb.war` in `target` directory
 - `docker-compose up --build`
 - To clean up - `docker-compose down -v`
+
+![](https://abhirockzz.files.wordpress.com/2017/05/snip.jpg)

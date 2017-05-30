@@ -1,0 +1,2 @@
+#java -jar /opt/payara/payara-micro.jar --deploy KafkaRAR-0.1.0-SNAPSHOT.rar --deploy payara-kafka-mdb.war
+java -jar /app/payara-micro-4.1.2.172.jar --deploy kafka-rar-0.1.0.rar --deploy payara-kafka-mdb.war

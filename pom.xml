@@ -13,7 +13,7 @@
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
@@ -24,13 +24,13 @@
         <dependency>
             <groupId>fish.payara.cloud.connectors.kafka</groupId>
             <artifactId>kafka-jca-api</artifactId>
-            <version>0.1.0</version>
+            <version>1.0.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>fish.payara.cloud.connectors.kafka</groupId>
             <artifactId>kafka-rar</artifactId>
-            <version>0.1.0</version>
+            <version>1.0.0</version>
             <type>rar</type>
         </dependency>
 

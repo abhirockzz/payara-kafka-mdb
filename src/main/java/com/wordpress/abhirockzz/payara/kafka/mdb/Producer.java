@@ -34,13 +34,7 @@ public class Producer implements Runnable {
     public void run() {
         LOGGER.log(Level.INFO, "Producing to topic " + topic);
         while (true) {
-            String key = "";
-            producer.send(new ProducerRecord(topic, "key-" + rnd.nextInt(10), "val-" + rnd.nextInt(10)), new Callback() {
-                @Override
-                public void onCompletion(RecordMetadata rm, Exception excptn) {
-                    LOGGER.log(Level.INFO, "Sent data....");
-                }
-            });
+            producer.send(new ProducerRecord(topic, "key-" + rnd.nextInt(10), "val-" + rnd.nextInt(10)), (rm, excptn) -> LOGGER.log(Level.INFO, "Sent data...."));
             try {
                 Thread.sleep(10000); //take it easy!
             } catch (InterruptedException ex) {

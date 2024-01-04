@@ -28,7 +28,7 @@ public class KafkaMDB implements KafkaListener {
     }
 
     @OnRecord( topics={"payara-kafka-mdb-topic"})
-    public void consume(ConsumerRecord<Object,Object> record) {
-        LOGGER.log(Level.INFO, "Payara Kafka MDB record key={0} and value: {1}", new Object[]{record.key(), record.value()});
+    public void consume(ConsumerRecord<Object,Object> consumerRecord) {
+        LOGGER.log(Level.INFO, "Payara Kafka MDB record key={0} and value: {1}", new Object[]{consumerRecord.key(), consumerRecord.value()});
     }
 }

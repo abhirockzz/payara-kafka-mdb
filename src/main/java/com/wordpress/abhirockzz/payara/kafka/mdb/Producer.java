@@ -13,6 +13,8 @@ import org.apache.kafka.clients.producer.RecordMetadata;
 
 public class Producer implements Runnable {
 
+    private static final Logger LOGGER = Logger.getLogger(Producer.class.getName());
+
     KafkaProducer<String, String> producer;
     String topic = null;
 
@@ -24,20 +26,19 @@ public class Producer implements Runnable {
 
         producer = new KafkaProducer<>(consumerProps);
         topic = System.getenv().getOrDefault("TOPIC_NAME", "test-topic");
-
     }
 
     static Random rnd = new Random();
 
     @Override
     public void run() {
-        System.out.println("Producing to topic "+ topic);
+        LOGGER.log(Level.INFO, "Producing to topic " + topic);
         while (true) {
             String key = "";
             producer.send(new ProducerRecord(topic, "key-" + rnd.nextInt(10), "val-" + rnd.nextInt(10)), new Callback() {
                 @Override
                 public void onCompletion(RecordMetadata rm, Exception excptn) {
-                    System.out.println("Sent data....");
+                    LOGGER.log(Level.INFO, "Sent data....");
                 }
             });
             try {
